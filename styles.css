@@ -12,10 +12,12 @@ body {
     font-size: 64px;
 }
 
-/* Add a black background color to the menu bar. */
+/* Style the menu bar. */
 .menu {
     background-color: rgb(250, 250, 250);
     overflow: hidden;
+    position: fixed;
+    width: 99%;
 }
 
 /* Style the menu items. */
@@ -38,15 +40,3 @@ body {
 .menu a:visited {
     color: rgb(125, 37, 206);
 }
-
-/* Make menu sticky. */
-.sticky {
-    position: sticky;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add padding to page content. */
-  .sticky + .content {
-    padding-top: 60px;
-  }
