@@ -8,7 +8,9 @@ body {
     background-color: #fff4e8;
 
     background-image:
-        radial-gradient(circle at center, rgba(255,255,255,0.5), transparent 70%),
+        radial-gradient(circle at center,
+        rgba(255,255,255,0.5),
+        transparent 70%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ctext x='10' y='50' font-size='32'%3E🐌%3C/text%3E%3C/svg%3E");
 
     background-repeat: repeat;
@@ -18,44 +20,67 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     min-height: 100vh;
+
+    overflow-x: hidden;
+
+    padding-top: 90px;
 }
 
-/* 
+/*
 nav
 */
 
 .menu {
+    position: fixed;
+
+    top: max(16px, env(safe-area-inset-top));
+    right: 20px;
+
+    z-index: 1000;
+
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
 
-    padding: 10px 18px;
-    margin: 20px 40px;
+    padding: 12px 18px;
 
-    background: rgba(15, 17, 23, 0.75);
-    backdrop-filter: blur(8px);
+    background: rgba(15, 17, 23, 0.78);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     border: 1px solid rgba(255, 255, 255, 0.08);
+
     border-radius: 999px;
 
-    width: fit-content;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.2);
 }
 
 .menu a {
-    color: #e8f0ff;
+    color: #f3f4f6;
+
     text-decoration: none;
 
-    padding: 6px 10px;
+    padding: 8px 12px;
+
     border-radius: 999px;
 
-    transition: 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
 .menu a:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
+
     color: white;
+
+    transform: translateY(-1px);
 }
 
-/* 
+/*
 main
 */
 
@@ -66,34 +91,36 @@ main
 
     text-align: center;
 
-    padding: 60px 20px;
+    padding: 40px 20px 80px;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
 
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+
+    line-height: 1.05;
 }
 
 .subtitle {
-    color: #a0a0a0;
+    color: #5c4a42;
 
-    margin-bottom: 40px;
-}
-
-h1, .subtitle, .button-description {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-}
-
-/*
-linkedin test
-*/
-
-.badge-container {
     margin-bottom: 50px;
+
+    max-width: 600px;
+
+    line-height: 1.5;
+
+    font-size: 1.05rem;
 }
 
-/* 
+h1,
+.subtitle,
+.button-description {
+    text-shadow:
+        0 2px 10px rgba(255,255,255,0.4);
+}
+/*
 buttons
 */
 
@@ -116,26 +143,31 @@ mystery button
 
     align-items: center;
 
-    gap: 14px;
+    gap: 16px;
 }
 
 .button-description {
-    max-width: 320px;
+    max-width: 340px;
 
-    color: #e6e6e6;
-    line-height: 1.5;
+    color: #f8f8f8;
+
+    line-height: 1.6;
     font-size: 0.95rem;
 
-    background: rgba(15, 17, 23, 0.65);
-    padding: 10px 12px;
-    border-radius: 12px;
+    background: rgba(15, 17, 23, 0.72);
+
+    padding: 14px 16px;
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(4px);
 }
 
 .mystery-button {
     display: block;
 
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
 
     border-radius: 50%;
 
@@ -148,13 +180,17 @@ mystery button
         0 0 20px rgba(209, 139, 255, 0.6),
         0 0 40px rgba(255, 239, 159, 0.3);
 
-    transition: 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
     animation: pulse 2s infinite;
 }
 
 .mystery-button:hover {
-    transform: scale(1.1) rotate(8deg);
+    transform:
+        scale(1.12)
+        rotate(8deg);
 
     box-shadow:
         0 0 30px rgba(209, 139, 255, 0.9),
@@ -176,13 +212,12 @@ mystery button
 }
 
 /*
-rickroll button
+general buttons 🫡
 */
 
-.cute-button {
-    background: #1f2937;
-
-    color: white;
+.cute-button,
+.download-button {
+    display: inline-block;
 
     text-decoration: none;
 
@@ -190,11 +225,23 @@ rickroll button
 
     border-radius: 14px;
 
+    color: white;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.25);
+}
+
+.cute-button {
+    background: #1f2937;
+
     border: 1px solid #374151;
-
-    transition: 0.25s ease;
-
-    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
 }
 
 .cute-button:hover {
@@ -207,16 +254,43 @@ rickroll button
     background: #ff4d6d;
 }
 
+.download-button {
+    margin-top: 2rem;
+
+    background:
+        linear-gradient(135deg,
+        #ff4d6d,
+        #ff7a8f);
+
+    border: none;
+}
+
+.download-button:hover {
+    transform:
+        scale(1.05)
+        rotate(-1deg);
+
+    background:
+        linear-gradient(135deg,
+        #ff3355,
+        #ff6a80);
+
+    box-shadow:
+        0 10px 30px rgba(255, 77, 109, 0.35);
+}
+
 /*
-lorem ipsum
+lorem ipsum page
 */
 
 .lorem-page {
-    max-width: 900px;
+    max-width: 1000px;
 
     margin: auto;
 
-    padding: 60px 24px;
+    padding: 40px 20px 80px;
+
+    text-align: center;
 }
 
 .back-button {
@@ -224,38 +298,67 @@ lorem ipsum
 
     margin: 20px 0 40px;
 
-    color: #9ecbff;
+    color: #3b82f6;
 
     text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-button:hover {
+    opacity: 0.7;
 }
 
 .lorem-box {
     background: white;
-    width: 8.5in;
+
+    width: min(100%, 8.5in);
+
     min-height: 11in;
 
-    padding: 1in;
+    padding: clamp(24px, 5vw, 1in);
 
     margin: 40px auto;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    border-radius: 8px;
 
     box-shadow:
         0 0 0 1px rgba(0,0,0,0.05),
         0 12px 40px rgba(0,0,0,0.15);
 }
 
-.download-button {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 1.5rem;
-    background: #ff4d6d;
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: transform 0.2s ease, background 0.2s ease;
-}
+/*
+mobile nav overlap test
+*/
 
-.download-button:hover {
-    background: #ff3355;
-    transform: scale(1.05);
+@media (max-width: 700px) {
+
+    body {
+        padding-top: 120px;
+    }
+
+    .menu {
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        width: calc(100% - 32px);
+
+        justify-content: center;
+
+        border-radius: 24px;
+    }
+
+    .lorem-box {
+        min-height: auto;
+    }
+
+    .button-description {
+        max-width: 90%;
+    }
 }
