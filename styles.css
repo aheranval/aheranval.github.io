@@ -362,3 +362,90 @@ mobile nav overlap test
         max-width: 90%;
     }
 }
+
+/*
+caesar popup
+*/
+
+.button-wrapper {
+    position: relative;
+}
+
+.caesar-popup {
+    position: absolute;
+
+    top: 120px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    opacity: 0;
+
+    transform:
+        translateY(10px)
+        scale(0.95);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+/*
+show on hover
+*/
+
+.button-wrapper:hover .caesar-popup {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.caesar-image {
+    width: 180px;
+
+    filter:
+        drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+
+    animation:
+        floaty 3s ease-in-out infinite;
+}
+
+.caesar-text {
+    max-width: 220px;
+
+    padding: 14px 18px;
+
+    background:
+        rgba(15, 17, 23, 0.9);
+
+    color: #fff4e8;
+
+    border-radius: 18px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.2);
+}
+
+@keyframes floaty {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
