@@ -230,13 +230,15 @@ lorem ipsum
 }
 
 .lorem-box {
-    background: #1a1d26;
+    background: white;
+    width: 8.5in;
+    min-height: 11in;
 
-    padding: 30px;
+    padding: 1in;
 
-    border-radius: 16px;
+    margin: 40px auto;
 
-    line-height: 1.8;
-
-    border: 1px solid #2d3748;
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,0.05),
+        0 12px 40px rgba(0,0,0,0.15);
 }
