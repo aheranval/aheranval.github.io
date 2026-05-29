@@ -6,7 +6,6 @@
 
 body {
     background-color: #fff4e8;
-
     background-image:
         radial-gradient(circle at center,
         rgba(255,255,255,0.5),
@@ -14,15 +13,10 @@ body {
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ctext x='10' y='50' font-size='32'%3E🐌%3C/text%3E%3C/svg%3E");
 
     background-repeat: repeat;
-
     color: #2d1b14;
-
     font-family: Arial, Helvetica, sans-serif;
-
     min-height: 100vh;
-
     overflow-x: hidden;
-
     padding-top: 90px;
 }
 
@@ -35,24 +29,17 @@ nav
 
     top: max(16px, env(safe-area-inset-top));
     right: 20px;
-
     z-index: 1000;
-
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-
     padding: 12px 18px;
-
     background: rgba(15, 17, 23, 0.78);
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
+    
     border: 1px solid rgba(255, 255, 255, 0.08);
-
     border-radius: 999px;
-
     box-shadow:
         0 8px 30px rgba(0,0,0,0.2);
 }
@@ -127,9 +114,7 @@ buttons
 .buttons {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     gap: 40px;
 }
 
@@ -140,42 +125,31 @@ mystery button
 .button-wrapper {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     gap: 16px;
 }
 
 .button-description {
     max-width: 340px;
-
     color: #f8f8f8;
-
     line-height: 1.6;
     font-size: 0.95rem;
-
     background: rgba(15, 17, 23, 0.72);
-
     padding: 14px 16px;
-
     border-radius: 16px;
-
     backdrop-filter: blur(4px);
 }
 
 .mystery-button {
     display: block;
-
     width: 90px;
     height: 90px;
 
     border-radius: 50%;
-
     background:
         radial-gradient(circle at top,
         #ffef9f,
         #d18bff);
-
     box-shadow:
         0 0 20px rgba(209, 139, 255, 0.6),
         0 0 40px rgba(255, 239, 159, 0.3);
@@ -183,7 +157,6 @@ mystery button
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
-
     animation: pulse 2s infinite;
 }
 
@@ -191,7 +164,6 @@ mystery button
     transform:
         scale(1.12)
         rotate(8deg);
-
     box-shadow:
         0 0 30px rgba(209, 139, 255, 0.9),
         0 0 60px rgba(255, 239, 159, 0.5);
@@ -201,11 +173,9 @@ mystery button
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.03);
     }
-
     100% {
         transform: scale(1);
     }
@@ -218,35 +188,26 @@ general buttons 🫡
 .cute-button,
 .download-button {
     display: inline-block;
-
     text-decoration: none;
-
     padding: 14px 22px;
-
     border-radius: 14px;
-
     color: white;
-
     font-weight: bold;
-
     transition:
         transform 0.25s ease,
         background 0.25s ease,
         box-shadow 0.25s ease;
-
     box-shadow:
         0 4px 14px rgba(0,0,0,0.25);
 }
 
 .cute-button {
     background: #1f2937;
-
     border: 1px solid #374151;
 }
 
 .cute-button:hover {
     transform: translateY(-3px);
-
     background: #374151;
 }
 
@@ -285,23 +246,16 @@ lorem ipsum page
 
 .lorem-page {
     max-width: 1000px;
-
     margin: auto;
-
     padding: 40px 20px 80px;
-
     text-align: center;
 }
 
 .back-button {
     display: inline-block;
-
     margin: 20px 0 40px;
-
     color: #3b82f6;
-
     text-decoration: none;
-
     transition: opacity 0.2s ease;
 }
 
@@ -311,21 +265,13 @@ lorem ipsum page
 
 .lorem-box {
     background: white;
-
     width: min(100%, 8.5in);
-
     min-height: 11in;
-
     padding: clamp(24px, 5vw, 1in);
-
     margin: 40px auto;
-
     text-align: left;
-
     line-height: 1.8;
-
     border-radius: 8px;
-
     box-shadow:
         0 0 0 1px rgba(0,0,0,0.05),
         0 12px 40px rgba(0,0,0,0.15);
@@ -336,28 +282,20 @@ mobile nav overlap test
 */
 
 @media (max-width: 700px) {
-
     body {
         padding-top: 120px;
     }
-
     .menu {
         left: 50%;
         right: auto;
-
         transform: translateX(-50%);
-
         width: calc(100% - 32px);
-
         justify-content: center;
-
         border-radius: 24px;
     }
-
     .lorem-box {
         min-height: auto;
     }
-
     .button-description {
         max-width: 90%;
     }
@@ -374,11 +312,11 @@ caesar popup
 .caesar-popup {
     position: absolute;
 
-    top: 120px;
-
+    top: 40px;
+    left: 180px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 16px;
 
     opacity: 0;
 
@@ -396,56 +334,45 @@ caesar popup
 /*
 show on hover
 */
-
 .button-wrapper:hover .caesar-popup {
     opacity: 1;
-
     transform:
         translateY(0)
         scale(1);
 }
 
 .caesar-image {
-    width: 180px;
-    right: -220px;
-    top: 20px;
+    width: 220px;
+    opacity: 0.9;
     filter:
-        drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+        drop-shadow(0 18px 40px rgba(0,0,0,0.45));
 
     animation:
         floaty 3s ease-in-out infinite;
 }
 
 .caesar-text {
+    margin-top: -20px; /* overlap image slightly */
     max-width: 220px;
-
-    padding: 14px 18px;
-
-    background:
-        rgba(15, 17, 23, 0.9);
-
+    padding: 12px 16px;
+    background: rgba(15, 17, 23, 0.92);
     color: #fff4e8;
-
-    border-radius: 18px;
-
+    border-radius: 16px;
+    text-align: center;
     line-height: 1.5;
-
     font-style: italic;
-
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.2);
+        0 10px 30px rgba(0,0,0,0.3);
+    z-index: 2;
 }
 
 @keyframes floaty {
-
     0% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-8px);
     }
-
     100% {
         transform: translateY(0px);
     }
