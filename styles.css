@@ -255,13 +255,13 @@ general buttons 🫡
 }
 
 .download-button {
-    margin-top: 2rem;
-
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
     background:
         linear-gradient(135deg,
         #ff4d6d,
         #ff7a8f);
-
     border: none;
 }
 
