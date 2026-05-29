@@ -407,7 +407,8 @@ show on hover
 
 .caesar-image {
     width: 180px;
-
+    right: -220px;
+    top: 20px;
     filter:
         drop-shadow(0 10px 25px rgba(0,0,0,0.25));
 
