@@ -21,25 +21,37 @@ body {
 }
 
 /* 
-navigation
+nav
 */
 
 .menu {
     display: flex;
     gap: 20px;
 
-    padding: 20px 40px;
+    padding: 10px 18px;
+    margin: 20px 40px;
+
+    background: rgba(15, 17, 23, 0.75);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    width: fit-content;
 }
 
 .menu a {
-    color: #9ecbff;
-
+    color: #e8f0ff;
     text-decoration: none;
+
+    padding: 6px 10px;
+    border-radius: 999px;
 
     transition: 0.2s ease;
 }
 
 .menu a:hover {
+    background: rgba(255, 255, 255, 0.08);
     color: white;
 }
 
@@ -67,6 +79,10 @@ h1 {
     color: #a0a0a0;
 
     margin-bottom: 40px;
+}
+
+h1, .subtitle, .button-description {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /*
@@ -106,11 +122,13 @@ mystery button
 .button-description {
     max-width: 320px;
 
-    color: #c9c9c9;
-
+    color: #e6e6e6;
     line-height: 1.5;
-
     font-size: 0.95rem;
+
+    background: rgba(15, 17, 23, 0.65);
+    padding: 10px 12px;
+    border-radius: 12px;
 }
 
 .mystery-button {
