@@ -83,6 +83,44 @@ body {
     transform: rotate(15deg);
 }
 
+/* nav */
+
+.menu {
+    position: fixed;
+    top: max(16px, env(safe-area-inset-top));
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(15, 17, 23, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 999px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.2);
+}
+
+.menu a {
+    color: #f3f4f6;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition:
+        background .2s,
+        transform .2s,
+        color .2s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,.12);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* the rest */
+
 main {
     width: min(1100px, 90%);
     margin: auto;
