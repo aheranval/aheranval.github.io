@@ -273,3 +273,38 @@ main {
 .badge:hover {
     transform: rotate(-2deg);
 }
+
+/* mysterious totally-not-a-button button */
+
+.secret-entry {
+
+    position: fixed;
+
+    bottom: 12px;
+
+    left: 12px;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    opacity: 0;
+
+    cursor: default;
+
+    z-index: 2000;
+
+}
+
+
+/* slight hover reveal administrative portal */
+
+.secret-entry:hover {
+    opacity: 0.15;
+    background: #2b2b2b;
+    cursor: pointer;
+}
