@@ -274,30 +274,19 @@ main {
     transform: rotate(-2deg);
 }
 
-/* mysterious totally-not-a-button button */
+/* totally not a button */
 
 .secret-entry {
-
     position: fixed;
-
     bottom: 12px;
-
     left: 12px;
-
     width: 24px;
-
     height: 24px;
-
     border-radius: 50%;
-
     background: transparent;
-
     opacity: 0;
-
     cursor: default;
-
     z-index: 2000;
-
 }
 
 
