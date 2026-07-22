@@ -8,12 +8,19 @@ body {
     padding-top: 90px;
 }
 
+main {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
 /* background */
 
 .running-background {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     pointer-events: none;
 }
@@ -21,9 +28,11 @@ body {
 
 .running-background span {
     position: absolute;
-    font-size: 48px;
-    opacity: 0.07;
-    filter: grayscale(15%);
+    font-size: 42px;
+    opacity: 0.12;
+    filter:
+        grayscale(15%)
+        blur(0.3px);
 }
 
 
@@ -120,11 +129,6 @@ body {
 }
 
 /* the rest */
-
-main {
-    width: min(1100px, 90%);
-    margin: auto;
-}
 
 .hero {
     text-align: center;
