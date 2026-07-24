@@ -158,4 +158,6 @@ async function loadAdventures() {
                 badge.style.opacity = "1";
             }
         });
-    })
+}
+
+loadAdventures();
