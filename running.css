@@ -15,6 +15,14 @@ main {
     margin: auto;
 }
 
+.badge {
+    opacity: 0.35;
+}
+
+.badge:hover {
+    opacity: 1;
+}
+
 /* background */
 
 .running-background {
