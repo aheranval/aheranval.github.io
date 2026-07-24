@@ -23,6 +23,28 @@ main {
     opacity: 1;
 }
 
+.expandable {
+    cursor: pointer;
+}
+
+.dropdown-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    margin-top: 15px;
+    text-align: left;
+    color: #555;
+}
+
+.expandable.open .dropdown-list {
+    max-height: 300px;
+}
+
+.dropdown-list div {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
 /* background */
 
 .running-background {
