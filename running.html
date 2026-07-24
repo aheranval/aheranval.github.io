@@ -32,40 +32,56 @@
     <h1>
         Alice's Running Passport
     </h1>
+
     <p class="subtitle">
         Goal: collect one mile whenever I travel
     </p>
+
     <p class="hero-note">
         Pokémon Go? More Like Pokémon Stop Destroying Your Knees ❤️‍🩹
     </p>
 </header>
 
 <section class="stats">
-<div class="stat-card">
+
+<div class="stat-card expandable" id="miles-card">
+
     <div class="emoji">
         🏃‍♀️
     </div>
+
     <h2 id="total-miles">
         0
     </h2>
+
     <p>
         Miles
     </p>
+
+    <div class="dropdown-list"></div>
+
 </div>
 
-<div class="stat-card">
+<div class="stat-card expandable" id="countries-card">
+
     <div class="emoji">
         🌍
     </div>
+
     <h2 id="country-count">
         0
     </h2>
+
     <p>
         Countries
     </p>
+
+    <div class="dropdown-list"></div>
+
 </div>
 
-<div class="stat-card">
+<div class="stat-card expandable" id="places-card">
+
     <div class="emoji">
         📍
     </div>
@@ -73,35 +89,50 @@
     <h2 id="place-count">
         0
     </h2>
+
     <p>
         Places
     </p>
+
+    <div class="dropdown-list"></div>
+
 </div>
 
-<div class="stat-card">
+<div class="stat-card expandable" id="states-card">
+
     <div class="emoji">
         🗺️
     </div>
+
     <h2 id="state-count">
         0
     </h2>
+
     <p>
         States
     </p>
+
+    <div class="dropdown-list"></div>
+
 </div>
 
-<div class="stat-card">
+<div class="stat-card expandable" id="cities-card">
+
     <div class="emoji">
         🏙️
     </div>
+
     <h2 id="city-count">
         0
     </h2>
+
     <p>
         Cities
     </p>
-</div>
 
+    <div class="dropdown-list"></div>
+
+</div>
 
 </section>
 
@@ -109,11 +140,14 @@
 <h2>
 Running Map
 </h2>
+
 <div id="map-placeholder">
 <div class="placeholder-text">
+
 <div class="placeholder-icon">
 🗺️
 </div>
+
 <h3>
 Interactive map under construction
 </h3>
@@ -132,121 +166,82 @@ The geographic running department is currently asleep.
 <h2>
 Recent Adventures
 </h2>
-<div id="recent-adventures">
 
+<div id="recent-adventures">
 
 <!-- Javascript inserts adventures here -->
 
-
 </div>
-
 
 </section>
 
 <section class="achievements">
+
 <h2>
 Passport Stamps
 </h2>
+
 <div class="badge-grid">
 
 <div class="badge" id="cold">
 🧊
 <br>
-
 Ran Somewhere
 <br>
-
 Ridiculously Cold
-
 </div>
 
 <div class="badge" id="heatstroke">
-
 🥵
 <br>
-
 Heatstroke
 <br>
-
 Any%
-
 </div>
 
 <div class="badge" id="jetlag">
-
 ✈️
 <br>
-
 Jet Lag
 <br>
-
 Speedrun
-
 </div>
 
 <div class="badge" id="couples">
-
 ❤️
 <br>
-
 Couples
 <br>
-
 Run
-
 </div>
 
 <div class="badge" id="main-character">
-
 🌅
 <br>
-
 Main Character
 <br>
-
 Moment
-
 </div>
 
 <div class="badge" id="counts">
-
 🏃
 <br>
-
 I Guess This
 <br>
-
 Counts
-
 </div>
 
-
-
 </div>
-
 
 </section>
 
-
 </main>
-
-
-
-
-
-<!-- secret admin portal -->
 
 <a href="3k4t3r1n4.html"
 class="secret-entry"
-aria-label="Secret running log">
-
 </a>
-
-
 
 <script src="running.js"></script>
 
-
 </body>
-
 </html>
