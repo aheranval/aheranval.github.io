@@ -8,6 +8,65 @@ fetch("data/adventures.json")
         const visibleRuns = adventures.filter(
             run => !run.hidden
         );
+        
+        // Expandable stat cards
+        function createDropdown(cardID, items) {
+            const card = document.getElementById(cardID);
+            const list = card.querySelector(".dropdown-list");
+            [...items]
+                .sort()
+                .forEach(item => {
+                    const entry = document.createElement("div");
+                    entry.textContent = item;
+                    list.appendChild(entry);
+                });
+            card.addEventListener(
+                "click", () => {
+                    card.classList.toggle("open");
+                }
+            );
+        }
+
+// Countries
+createDropdown(
+    "countries-card",
+    new Set(
+        visibleRuns.map(
+            run => run.country
+        )
+    )
+);
+
+// States
+createDropdown(
+    "states-card",
+    new Set(
+        visibleRuns
+            .map(run => run.state)
+            .filter(Boolean)
+    )
+);
+
+// Cities
+createDropdown(
+    "cities-card",
+    new Set(
+        visibleRuns
+            .map(run => run.city)
+            .filter(Boolean)
+    )
+);
+
+// Places
+createDropdown(
+    "places-card",
+    new Set(
+        visibleRuns
+            .map(run => run.location)
+            .filter(Boolean)
+    )
+);
+
 
         const totalMiles = visibleRuns.reduce(
             (sum, run) => sum + run.distance,
