@@ -1,0 +1,45 @@
+{
+    "version": 1,
+    "adventures": [
+        {
+            "id": 1,
+            "hidden": false,
+            "date": "2026-08-15",
+            "country": "Mexico",
+            "state": "Quintana Roo",
+            "city": "Cancún",
+            "location": "Playa Delfines",
+            "distance": 3.2,
+            "duration": 34,
+            "timeOfDay": "Morning",
+            "official": true,
+            "notes": "Beach run before the cruise. Humidity attempted murder.",
+            "photo": "cancun-beach.jpg",
+            "rating": 5,
+            "difficulty": "🥵",
+            "mapLink": "",
+            "stamps": [
+                "heatstroke",
+                "main-character"
+            ]
+        },
+        {
+            "id": 1784918048532,
+            "hidden": false,
+            "date": "2006-04-05",
+            "country": "France",
+            "state": "",
+            "city": "Paris",
+            "location": "",
+            "distance": 4,
+            "duration": 45,
+            "timeOfDay": "Morning",
+            "notes": "",
+            "photo": "",
+            "rating": 4,
+            "difficulty": "😀 Easy",
+            "mapLink": "",
+            "stamps": []
+        }
+    ]
+}
