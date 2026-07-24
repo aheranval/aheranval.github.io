@@ -141,9 +141,7 @@ async function loadAdventures() {
                 container.appendChild(card);
             });
 
-        // -----------------------------
         // Passport stamps
-        // -----------------------------
         const earnedStamps = new Set();
 
         visibleRuns.forEach(run => {
@@ -161,9 +159,3 @@ async function loadAdventures() {
             }
         });
     })
-    .catch(error => {
-        console.error(
-            "Could not load running data:",
-            error
-        );
-    });
