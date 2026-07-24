@@ -1,20 +1,13 @@
-Hi! This is under construction!
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Alice's Running Passport</title>
-
-    <link rel="stylesheet" href="running.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice's Running Passport</title>
+<link rel="stylesheet" href="running.css">
 </head>
 
 <body>
-
 <div class="running-background" aria-hidden="true">
     <span>🐌</span>
     <span>🏃‍♀️</span>
@@ -36,151 +29,224 @@ Hi! This is under construction!
 <main>
 
 <header class="hero">
-
+    <h1>
+        Alice's Running Passport
+    </h1>
     <p class="subtitle">
         Goal: collect one mile whenever I travel
     </p>
-
     <p class="hero-note">
         Pokémon Go? More Like Pokémon Stop Destroying Your Knees ❤️‍🩹
     </p>
-
 </header>
 
 <section class="stats">
+<div class="stat-card">
+    <div class="emoji">
+        🏃‍♀️
+    </div>
+    <h2 id="total-miles">
+        0
+    </h2>
+    <p>
+        Miles
+    </p>
+</div>
 
-    <div class="stat-card">
-        <div class="emoji">🏃‍♀️</div>
-        <h2>0</h2>
-        <p>Miles</p>
+<div class="stat-card">
+    <div class="emoji">
+        🌍
+    </div>
+    <h2 id="country-count">
+        0
+    </h2>
+    <p>
+        Countries
+    </p>
+</div>
+
+<div class="stat-card">
+    <div class="emoji">
+        📍
     </div>
 
-    <div class="stat-card">
-        <div class="emoji">🌍</div>
-        <h2>0</h2>
-        <p>Countries</p>
-    </div>
+    <h2 id="place-count">
+        0
+    </h2>
+    <p>
+        Places
+    </p>
+</div>
 
-    <div class="stat-card">
-        <div class="emoji">📍</div>
-        <h2>0</h2>
-        <p>Places</p>
+<div class="stat-card">
+    <div class="emoji">
+        🗺️
     </div>
+    <h2 id="state-count">
+        0
+    </h2>
+    <p>
+        States
+    </p>
+</div>
 
-    <div class="stat-card">
-        <div class="emoji">🗺️</div>
-        <h2>0</h2>
-        <p>States</p>
+<div class="stat-card">
+    <div class="emoji">
+        🏙️
     </div>
+    <h2 id="city-count">
+        0
+    </h2>
+    <p>
+        Cities
+    </p>
+</div>
 
-    <div class="stat-card">
-        <div class="emoji">🏙️</div>
-        <h2>0</h2>
-        <p>Cities</p>
-    </div>
 
 </section>
 
 <section class="map-section">
+<h2>
+Running Map
+</h2>
+<div id="map-placeholder">
+<div class="placeholder-text">
+<div class="placeholder-icon">
+🗺️
+</div>
+<h3>
+Interactive map under construction
+</h3>
 
-    <h2>Running Map</h2>
+<p>
+The geographic running department is currently asleep.
+</p>
 
-    <div id="map-placeholder">
-
-        <div class="placeholder-text">
-
-            <div class="placeholder-icon">🗺️</div>
-
-            <h3>interactive map under construction</h3>
-
-            <p>
-            </p>
-
-        </div>
-
-    </div>
+</div>
+</div>
 
 </section>
 
 <section class="recent">
 
-    <h2>Recent Adventures</h2>
+<h2>
+Recent Adventures
+</h2>
+<div id="recent-adventures">
 
-    <div class="run-card">
 
-        <h3>Mexico</h3>
+<!-- Javascript inserts adventures here -->
 
-        <p class="run-date">
-            August 2026
-        </p>
 
-        <p>
-          We'll see if I manage to get a run in during my trip. 
-          Does a cruise really count for the country? Maybe I'll get a beach run in.
-        </p>
+</div>
 
-    </div>
-
-    <div class="run-card">
-
-        <h3>Spain</h3>
-
-        <p class="run-date">
-          August 2026
-        </p>
-
-        <p>
-          We shall see
-        </p>
-
-    </div>
 
 </section>
 
 <section class="achievements">
+<h2>
+Passport Stamps
+</h2>
+<div class="badge-grid">
 
-    <h2>Passport Stamps</h2>
+<div class="badge" id="cold">
+🧊
+<br>
 
-    <div class="badge-grid">
+Ran Somewhere
+<br>
 
-        <div class="badge">
-            🧊<br>
-            Ran Somewhere<br>Ridiculously Cold
-        </div>
+Ridiculously Cold
 
-        <div class="badge">
-            🥵<br>
-            Heatstroke<br>Any%
-        </div>
+</div>
 
-        <div class="badge">
-            ✈️<br>
-            Jet Lag<br>Speedrun
-        </div>
+<div class="badge" id="heatstroke">
 
-        <div class="badge">
-            ❤️<br>
-            Couples<br>Run
-        </div>
+🥵
+<br>
 
-        <div class="badge">
-            🌅<br>
-            Main Character<br>Moment
-        </div>
+Heatstroke
+<br>
 
-        <div class="badge">
-            🏃<br>
-            I Guess This<br>Counts
-        </div>
+Any%
 
-    </div>
+</div>
+
+<div class="badge" id="jetlag">
+
+✈️
+<br>
+
+Jet Lag
+<br>
+
+Speedrun
+
+</div>
+
+<div class="badge" id="couples">
+
+❤️
+<br>
+
+Couples
+<br>
+
+Run
+
+</div>
+
+<div class="badge" id="main-character">
+
+🌅
+<br>
+
+Main Character
+<br>
+
+Moment
+
+</div>
+
+<div class="badge" id="counts">
+
+🏃
+<br>
+
+I Guess This
+<br>
+
+Counts
+
+</div>
+
+
+
+</div>
+
 
 </section>
 
+
 </main>
 
-    <a href="log.html" class="secret-entry" aria-label="Secret running log">
-    </a>
-    
+
+
+
+
+<!-- secret admin portal -->
+
+<a href="3k4t3r1n4.html"
+class="secret-entry"
+aria-label="Secret running log">
+
+</a>
+
+
+
+<script src="running.js"></script>
+
+
 </body>
+
 </html>
