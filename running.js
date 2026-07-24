@@ -90,7 +90,7 @@ fetch("data/adventures.json")
         const earnedStamps = new Set();
 
         visibleRuns.forEach(run => {
-            run.stamps.forEach(stamp => {
+            (run.stamps || []).forEach(stamp => {
                 earnedStamps.add(stamp);
             });
         });
