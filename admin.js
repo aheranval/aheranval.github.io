@@ -6,6 +6,7 @@ fetch("data/adventures.json")
     .then(response => response.json())
     .then(data => {
         adventures = data.adventures;
+        databaseLoaded = true;
 
         console.log(
             "Loaded adventures:",
@@ -23,8 +24,6 @@ fetch("data/adventures.json")
         );
     });
 
-databaseLoaded = true;
-
 // Form submission
 document
     .getElementById("adventure-form")
@@ -32,6 +31,11 @@ document
         "submit",
         function(event) {
             event.preventDefault();
+
+            if (!databaseLoaded) {
+                alert("Database still loading. Try again!");
+                return;
+            }
 
             const stamps = [
                 ...document.querySelectorAll(
@@ -89,11 +93,6 @@ document
                         .getElementById("time")
                         .value,
 
-                official:
-                    document
-                        .getElementById("official")
-                        .checked,
-
                 notes:
                     document
                         .getElementById("notes")
@@ -119,11 +118,8 @@ document
                 mapLink: "",
                 stamps: stamps
             };
-          if (!databaseLoaded) {
-            alert("Database still loading. Try again!");
-            return;
-          }
-          saveAdventure(newAdventure);
+            
+            saveAdventure(newAdventure);
         }
     );
 
