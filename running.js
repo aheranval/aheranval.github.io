@@ -26,46 +26,30 @@ fetch("data/adventures.json")
                 }
             );
         }
+        
+        // Countries
+        createDropdown(
+            "countries-card",
+            new Set(visibleRuns.map(run => run.country))
+        );
 
-// Countries
-createDropdown(
-    "countries-card",
-    new Set(
-        visibleRuns.map(
-            run => run.country
-        )
-    )
-);
+        // States
+        createDropdown(
+            "states-card",
+            new Set(visibleRuns.map(run => run.state).filter(Boolean))
+        );
 
-// States
-createDropdown(
-    "states-card",
-    new Set(
-        visibleRuns
-            .map(run => run.state)
-            .filter(Boolean)
-    )
-);
+        // Cities
+        createDropdown(
+            "cities-card",
+            new Set(visibleRuns.map(run => run.city).filter(Boolean))
+        );
 
-// Cities
-createDropdown(
-    "cities-card",
-    new Set(
-        visibleRuns
-            .map(run => run.city)
-            .filter(Boolean)
-    )
-);
-
-// Places
-createDropdown(
-    "places-card",
-    new Set(
-        visibleRuns
-            .map(run => run.location)
-            .filter(Boolean)
-    )
-);
+        // Places
+        createDropdown(
+            "places-card",
+            new Set(visibleRuns.map(run => run.location).filter(Boolean))
+        );
 
 
         const totalMiles = visibleRuns.reduce(
