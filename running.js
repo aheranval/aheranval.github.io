@@ -1,8 +1,22 @@
-// Load running adventures
-fetch("data/adventures.json")
-    .then(response => response.json())
-    .then(data => {
-        const adventures = data.adventures;
+// Load runs from Supabase
+async function loadAdventures() {
+    const {
+        data: adventures,
+        error
+    } = await supabaseClient
+        .from("adventures")
+        .select("*");
+    if (error) {
+        console.error(
+            "Could not load adventures:",
+            error
+        );
+        return;
+    }
+    console.log(
+        "Loaded adventures:",
+        adventures
+    );
 
         // Calculate statistics
         const visibleRuns = adventures.filter(
