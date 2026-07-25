@@ -1,28 +1,4 @@
-let adventures = [];
-let databaseLoaded = false;
 
-// Load existing database
-fetch("data/adventures.json")
-    .then(response => response.json())
-    .then(data => {
-        adventures = data.adventures;
-        databaseLoaded = true;
-
-        console.log(
-            "Loaded adventures:",
-            adventures
-        );
-    })
-    .catch(error => {
-        console.error(
-            "Could not load adventure database:",
-            error
-        );
-
-        alert(
-            "Could not load existing adventures.json"
-        );
-    });
 
 // Form submission
 document
@@ -31,11 +7,6 @@ document
         "submit",
         function(event) {
             event.preventDefault();
-
-            if (!databaseLoaded) {
-                alert("Database still loading. Try again!");
-                return;
-            }
 
             const stamps = [
                 ...document.querySelectorAll(
@@ -46,7 +17,6 @@ document
             );
 
             const newAdventure = {
-                id: Date.now(),
                 hidden: false,
 
                 date:
@@ -123,44 +93,24 @@ document
         }
     );
 
-// Add adventure + download JSON
-function saveAdventure(newAdventure) {
-    adventures.push(newAdventure);
-
-    const database = {
-        version: 1,
-        adventures: adventures
-    };
-
-    const json = JSON.stringify(
-        database,
-        null,
-        4
-    );
-
-    const blob = new Blob(
-        [json],
-        {
-            type: "application/json"
-        }
-    );
-
-    const url =
-        URL.createObjectURL(blob);
-
-    const link =
-        document.createElement("a");
-
-    link.href = url;
-    link.download = "adventures.json";
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    URL.revokeObjectURL(url);
-
+// Add adventure
+async function saveAdventure(newAdventure) {
+    const {
+        error
+    } = await supabaseClient
+        .from("adventures")
+        .insert([newAdventure]);
+    if (error) {
+        console.error(error);
+        alert(
+            "Could not save adventure."
+        );
+        return;
+    }
     alert(
-        "Adventure added! Replace data/adventures.json with the downloaded file."
+        "Adventure saved!"
     );
+    document
+        .getElementById("adventure-form")
+        .reset();
 }
