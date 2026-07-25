@@ -1,3 +1,7 @@
+const {
+    data
+} = await supabaseClient.auth.getSession();
+
 document
 .getElementById("login-button")
 .addEventListener(
